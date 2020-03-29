@@ -12,10 +12,10 @@
     <div class="row">
         <form method="post" id="add_car" action="add_car.php">
             <div class="form-group">
-                <input type="text" name="car_name" class="form-control">
+                <input type="text" name="car_name" class="form-control" required>
             </div>
             <div class="form-group">
-                <input type="submit" name="add" class="btn btn-primary" value="Add">
+                <input type="submit" name="add" class="btn btn-primary" value="Add" >
             </div>
         </form>
     </div>
@@ -23,6 +23,19 @@
         <div id="car-result">
 
         </div>
+    </div>
+    <div class="col-xs-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody id="show-cars">
+
+            </tbody>
+        </table>
     </div>
 </div>
 

@@ -1,4 +1,21 @@
 $(document).ready(function(){
+    //update display cars
+
+    setInterval(function(){
+        updateCars();
+    }, 1);
+
+    function updateCars(){
+        $.ajax({
+            url : 'display_cars.php',
+            type : 'POST',
+            success : function(show_cars){
+                if(!show_cars.error){
+                    $("#show-cars").html(show_cars);
+                }
+            }
+          });
+    }
     //search cars
   $('#search').keyup(function(){
       var search = $('#search').val();
